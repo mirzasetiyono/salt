@@ -1,0 +1,14 @@
+<div class="container">
+  <app-navbar></app-navbar>
+
+  <div class="row" id="main">
+    <div class="col-md-8">
+      <app-large-display class="large-display" *ngFor="let data of primaryData" [title]="data.country" [data]="data.news"></app-large-display>
+    </div>
+    <div class="col-md-4">
+      <app-side-display *ngFor="let data of secondaryData" [title]="data.country" [data]="data.news"></app-side-display>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

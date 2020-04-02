@@ -1,0 +1,30 @@
+<div class="row mt-5 px-3 pr-4">
+  <div class="col-md-8 ">
+    <div class="row d-flex justify-content-between">
+      <h5> {{ title }} </h5>
+      <p> News from {{ title }} </p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div *ngFor="let article of groupX" class="col-md-8">
+    <app-card type="largeBox" [urlToImage]="article.urlToImage" [author]="article.author" [title]="article.title"
+      [publishedAt]="article.publishedAt" [urlToPage]="article.url"></app-card>
+  </div>
+
+  <div class="col-md-4">
+    <div *ngFor="let article of groupY; index as i" class="col-md-12" [ngStyle]="{'margin-top': i> 0 ? '15px':
+      '0px', 'padding': '0px 0px 0px 0px'}">
+      <app-card type="smallBox" [urlToImage]="article.urlToImage" [title]="article.title" [author]="article.author"
+        [publishedAt]="article.publishedAt" [urlToPage]="article.url"></app-card>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div *ngFor="let article of groupZ" class="col-md-4" id="bottom-box">
+    <app-card type="smallBox" [urlToImage]="article.urlToImage" [title]="article.title" [author]="article.author"
+      [publishedAt]="article.publishedAt" [urlToPage]="article.url"></app-card>
+  </div>
+</div>

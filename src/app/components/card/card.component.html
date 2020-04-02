@@ -1,0 +1,41 @@
+<ng-container *ngIf="type === 'largeBox'">
+  <div class="card set-background" id="large-box" (click)="goToPage()" [ngStyle]="{'background-image': getImageUrl(true)}">
+    <div class="card-body no-border img-fluid">
+    </div>
+    <div class="card-footer no-border footer-background">
+      <span id="large-title">{{ title }}</span>
+      <br>
+      <span id="large-author">{{ author }}</span>
+      -
+      <span id="large-date">{{ publishedAt | date : 'short' }}</span>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="type === 'smallBox'">
+  <div class="card set-background" id="small-box" (click)="goToPage()"
+    [ngStyle]="{'background-image': getImageUrl(true)}">
+    <div class="card-body no-border img-fluid">
+    </div>
+    <div class="card-footer no-border footer-background">
+      <span class="ellipses-dot" id="small-title">{{ title }}</span>
+      <span id="small-date">{{ publishedAt | date : 'short' }}</span>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="type === 'imageCard'">
+  <div class="row image-card" (click)="goToPage()">
+    <div class="col-md-3 mt-2">
+      <img id="side-image" [src]="getImageUrl(false)" (error)="handleError($event)" class="img-thumbnail">
+    </div>
+    <div class="col-md-9 mt-2">
+      <div class="col-md-12">
+        <span class="ellipses-dot" id="side-title">{{ title }}</span>
+      </div>
+      <div class="col-md-12" id="side-date">
+        {{ publishedAt | date: 'short' }}
+      </div>
+    </div>
+  </div>
+</ng-container>

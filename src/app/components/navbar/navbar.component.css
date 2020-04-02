@@ -1,0 +1,40 @@
+.border-top{
+  border-top: 1px solid #fae7cb;
+  margin: 0 -15px 0 -15px;
+}
+
+.content-red{
+  color: #801336;
+}
+
+.button-nav{
+  height: 45px !important;
+  background-color: #fae7cb;
+}
+
+#button-account{
+  width: 45px !important;
+}
+
+#button-upload{
+  font-weight: bold !important;
+}
+
+#button-search{
+  background-color: #fae7cb;
+}
+
+#logo{
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 767px){
+  #button-account{
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+  #user-name{
+    margin-left: 15px;
+    margin-top: 15px;  
+  }
+}

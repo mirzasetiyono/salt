@@ -1,0 +1,13 @@
+<div class="row mt-5 px-3 pr-4">
+  <div class="col-md-12">
+    <div class="row d-flex justify-content-between">
+      <h5> {{ title }} </h5>
+      <p> More From {{ title }} </p>
+    </div>
+  </div>
+</div>
+<div id="content">
+  <app-card *ngFor="let article of articles" type="imageCard" [title]="article.title" [urlToImage]="article.urlToImage" [urlToPage]="article.url" [publishedAt]="article.publishedAt"></app-card>
+</div>
+
+
