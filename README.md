@@ -1,4 +1,4 @@
-# SaltTest
+# Salt Test
 
 ## This is code for Salt coding test
 
