@@ -1,11 +1,11 @@
 # Salt Test
 
-## This is code for Salt coding test
+## This is source code for Salt coding test
 
-1. Angular Version 9 Framework
+1. Angular version 9 framework
 
 2. Dependecies: 
   - Bootstrap 
-  - fontawesome
+  - Fontawesome
 
 3. Development time around a day and half.
